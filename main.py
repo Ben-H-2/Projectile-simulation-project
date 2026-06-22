@@ -8,6 +8,12 @@ def main():
     initialpos = np.array([initialxpos,initialypos])
 
     mass1 = float(input("enter mass of object (kg): "))
+    if mass1 < 0:
+        print("mass cannot be negative defaulting to 1kg")
+        mass1 = 1
+    elif mass1 == 0:
+        print("mass cannot be 0 defaulting to 1kg")
+        mass 1 =1
     angle = float(input("enter angle in degrees of launch in relation to x axis: "))
     speed = float(input("enter speed in m/s: "))
 
@@ -22,8 +28,8 @@ def main():
     
 
     dt1 = float(input("enter length of time increments (s): "))
-    total_time1 = float(input("enter total amound of time for simulation (s): "))
-    drag_coefficient1 = float(input("enter drag coefficient (usually between 0-2 squere is 0.47): "))
+    total_time1 = float(input("enter total amount of time for simulation (s): "))
+    drag_coefficient1 = float(input("enter drag coefficient (usually between 0-2 sphere is 0.47): "))
     
     output = model.simulate(initialpos,initial_velocity1,dt1,total_time1,mass1,drag_coefficient1) #calls the function
     r = output["r"]
