@@ -11,7 +11,7 @@ def plot_trajectory(r,label = "Projectile trajectory"):
     plt.xlabel("x (m)") # labels the axis
     plt.ylabel("y (m)")
     plt.title(label)
-    plt.tight_layout
+    plt.tight_layout()
     plt.axhline(0, linestyle="--")
     plt.grid(True) # enables a grid
     plt.legend() # displays name of line on graph
